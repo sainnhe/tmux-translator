@@ -23,7 +23,7 @@ Reload the configuration and press `prefix` + `I`
 
 Enter Copy Mode and select some text, then press `t` to translate it. Press Enter to close the popup window.
 
-There are 3 options available in this plugin:
+To customize this plugin:
 
 ```tmux
 # the key to trigger translation

@@ -21,7 +21,7 @@ set -g @plugin 'sainnhe/tmux-translator'
 
 进入 Copy Mode 选中一些文本，然后按 `t` 即可翻译，按回车退出翻译窗口。
 
-这个插件提供了 3 个选项：
+你可以通过以下选项来定制这个插件：
 
 ```tmux
 # 触发划词翻译的键
