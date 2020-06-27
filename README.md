@@ -1,6 +1,6 @@
-![](https://gitlab.com/sainnhe/img/-/raw/master/translator.png)
-
 [English](./README.md) | [中文](./README-zh.md)
+
+![](https://gitlab.com/sainnhe/img/-/raw/master/translator.png)
 
 # Installation
 
