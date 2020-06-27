@@ -19,7 +19,7 @@ set -g @plugin 'sainnhe/tmux-translator'
 
 # 使用方法
 
-进入 Copy Mode 选中一些文本，然后按 `t` 即可翻译。
+进入 Copy Mode 选中一些文本，然后按 `t` 即可翻译，按回车退出翻译窗口。
 
 这个插件提供了 3 个选项：
 
