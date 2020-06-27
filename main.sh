@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
 
-# TMUX_FZF_SED="${TMUX_FZF_SED:-sed}"
-# if [[ "$($TMUX_FZF_SED --version 2>/dev/null | head -n 1 | grep -o GNU)" != "GNU" ]]; then
-#     tmux run-shell -b 'echo "Unable to find executable GNU sed."'
-#     exit 1
-# fi
-# CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-#
-# if [[ -z "$TMUX_FZF_MENU" ]]; then
-#     ITEMS_ORIGIN=$(printf "session\nwindow\npane\ncommand\nkeybinding")
-# else
-#     ITEMS_ORIGIN=$(printf "menu\nsession\nwindow\npane\ncommand\nkeybinding")
-# fi
-# ITEM=$(printf "%s\n[cancel]" "$ITEMS_ORIGIN" | eval "$CURRENT_DIR/scripts/.fzf-tmux $TMUX_FZF_OPTIONS")
-# [[ "$ITEM" == "[cancel]" || -z "$ITEM" ]] && exit
-# ITEM=$(echo "$CURRENT_DIR/scripts/$ITEM" | $TMUX_FZF_SED 's/$/.sh/')
-# tmux run-shell -b "$ITEM"
-tmux popup -xC -yC -w50% -h50% -KE -R "python ~/repo/translator/translator.py $(tmux save-buffer -); read -r"
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source "$CURRENT_DIR/settings.sh"
+
+get_width() {
+	local key_bindings=$(get_tmux_option "$width" "$default_width")
+	local key
+	for key in $key_bindings; do
+		local value=$key
+	done
+	echo "$value"
+}
+
+get_height() {
+	local key_bindings=$(get_tmux_option "$height" "$default_height")
+	local key
+	for key in $key_bindings; do
+		local value=$key
+	done
+	echo "$value"
+}
+
+tmux popup -xC -yC -w$(get_width) -h$(get_height) -KE -R "python ~/repo/translator/translator.py $(tmux save-buffer -); read -r"

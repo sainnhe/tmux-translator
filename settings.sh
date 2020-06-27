@@ -1,5 +1,9 @@
 default_launch_key="t"
 launch_key="@tmux-translator"
+default_width="50%"
+width="@tmux-translator-width"
+default_height="50%"
+height="@tmux-translator-height"
 
 get_tmux_option() {
 	local option="$1"
