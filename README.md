@@ -1,42 +1,48 @@
 ![](https://gitlab.com/sainnhe/img/-/raw/master/translator.png)
 
-# 安装
+[English](./README.md) | [中文](./README-zh.md)
 
-## 依赖
+# Installation
 
-- 最新的 tmux master 分支 [tmux/tmux](https://github.com/tmux/tmux)，Arch 用户可以安装 [tmux-git](https://aur.archlinux.org/packages/tmux-git/)
+## Requirements
+
+- The newest development version of [tmux/tmux](https://github.com/tmux/tmux). For Arch Linux users, there is a package available in AUR: [tmux-git](https://aur.archlinux.org/packages/tmux-git/)
 - [skywind3000/translator#requirements](https://github.com/skywind3000/translator#requirements)
 
-## 通过 [TPM](https://github.com/tmux-plugins/tpm/) 安装
+## Install via [TPM](https://github.com/tmux-plugins/tpm/)
 
-把这一行添加到 `~/.tmux.conf`
+Add this line to your `~/.tmux.conf`:
 
 ```tmux
 set -g @plugin 'sainnhe/tmux-translator'
 ```
 
-重新加载配置，然后按 `prefix` + `I`
+Reload the configuration and press `prefix` + `I`
 
-# 使用方法
+# Usage
 
-进入 Copy Mode 选中一些文本，然后按 `t` 即可翻译，按回车退出翻译窗口。
+Enter Copy Mode and select some text, then press `t` to translate it. Press Enter to close the popup window.
 
-这个插件提供了 3 个选项：
+There are 3 options available in this plugin:
 
 ```tmux
-# 触发划词翻译的键
+# the key to trigger translation
 set -g @tmux-translator "t"
 
-# 浮动窗口宽度
+# the width of popup window
 set -g @tmux-translator-width "38%"
 
-# 浮动窗口高度
+# the height of popup window
 set -g @tmux-translator-height "38%"
 ```
 
+# More plugin
+
+- [sainnhe/tmux-fzf](https://github.com/sainnhe/tmux-fzf): Manage tmux sessions, windows, panes, etc. using fzf.
+
 # 许可
 
-`/engine` 目录下的代码参考 [skywind3000/translator](https://github.com/skywind3000/translator)
+For the code in the `/engine` directory, see [skywind3000/translator](https://github.com/skywind3000/translator).
 
-其余部分的代码以 [MIT](./LICENSE) 许可分发。
+Other code is distributed under [MIT](./LICENSE) license.
 
