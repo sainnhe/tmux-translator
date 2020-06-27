@@ -22,4 +22,37 @@ get_height() {
 	echo "$value"
 }
 
-tmux popup -xC -yC -w$(get_width) -h$(get_height) -KE -R "python ~/repo/translator/translator.py $(tmux save-buffer -); read -r"
+get_from() {
+	local key_bindings=$(get_tmux_option "$from" "$default_from")
+	local key
+	for key in $key_bindings; do
+		local value=$key
+	done
+	echo "$value"
+}
+
+get_to() {
+	local key_bindings=$(get_tmux_option "$to" "$default_to")
+	local key
+	for key in $key_bindings; do
+		local value=$key
+	done
+	echo "$value"
+}
+
+get_engine() {
+	local key_bindings=$(get_tmux_option "$engine" "$default_engine")
+	local key
+	for key in $key_bindings; do
+		local value=$key
+	done
+	echo "$value"
+}
+
+vars=$(echo "$(get_engine)" | sed "s/|/\n/g")
+while IFS= read -r line; do
+    result="${result}echo ---$line---; python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) $(tmux save-buffer -); echo ''; "
+done <<< "$vars"
+result="${result}read -r"
+
+tmux popup -xC -yC -w$(get_width) -h$(get_height) -KE -R "$result"

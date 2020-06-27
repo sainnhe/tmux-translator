@@ -34,13 +34,26 @@ set -g @tmux-translator-width "38%"
 
 # the height of popup window
 set -g @tmux-translator-height "38%"
+
+# translate from
+set -g @tmux-translator-from "en"
+
+# translate to
+set -g @tmux-translator-to "zh"
+
+# engine
+set -g @tmux-translator-engine "google"
+# multiple engines
+set -g @tmux-translator-engine "google|ciba|youdao"
 ```
+
+See [skywind3000/translator#engines](https://github.com/skywind3000/translator#engines) for all available engines.
 
 # More plugin
 
 - [sainnhe/tmux-fzf](https://github.com/sainnhe/tmux-fzf): Manage tmux sessions, windows, panes, etc. using fzf.
 
-# 许可
+# License
 
 For the code in the `/engine` directory, see [skywind3000/translator](https://github.com/skywind3000/translator).
 

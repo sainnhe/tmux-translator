@@ -32,7 +32,20 @@ set -g @tmux-translator-width "38%"
 
 # 浮动窗口高度
 set -g @tmux-translator-height "38%"
+
+# 从什么语言翻译
+set -g @tmux-translator-from "en"
+
+# 翻译到什么语言
+set -g @tmux-translator-to "zh"
+
+# 翻译引擎
+set -g @tmux-translator-engine "google"
+# 多个翻译引擎
+set -g @tmux-translator-engine "google|ciba|youdao"
 ```
+
+这里列出了所有可用引擎：[skywind3000/translator#engines](https://github.com/skywind3000/translator#engines)
 
 # 更多插件
 
