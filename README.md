@@ -49,7 +49,7 @@ set -g @tmux-translator-engine "google|ciba|youdao"
 
 See [skywind3000/translator#engines](https://github.com/skywind3000/translator#engines) for all available engines.
 
-# More plugin
+# More plugins
 
 - [sainnhe/tmux-fzf](https://github.com/sainnhe/tmux-fzf): Manage tmux sessions, windows, panes, etc. using fzf.
 
