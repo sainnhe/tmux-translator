@@ -51,7 +51,7 @@ get_engine() {
 
 vars=$(echo "$(get_engine)" | sed "s/|/\n/g")
 while IFS= read -r line; do
-    result="${result}echo ---$line---; python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) $(tmux save-buffer -); echo ''; "
+    result="${result}echo ---$line---; tmux save-buffer - | xargs -i python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) {}; echo ''; "
 done <<< "$vars"
 result="${result}read -r"
 
