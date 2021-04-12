@@ -21,7 +21,9 @@ Reload the configuration and press `prefix` + `I`
 
 # Usage
 
-Enter Copy Mode and select some text, then press `t` to translate it. Press Enter to close the popup window.
+Enter Copy Mode and select some text, then press `t` to translate it.
+
+To close the popup window, press Enter or Ctrl-C.
 
 To customize this plugin:
 

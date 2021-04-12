@@ -55,4 +55,4 @@ while IFS= read -r line; do
 done <<< "$vars"
 result="${result}read -r"
 
-tmux popup -xC -yC -w$(get_width) -h$(get_height) -KE -R "$result"
+tmux popup -w $(get_width) -h $(get_height) -E "$result"
