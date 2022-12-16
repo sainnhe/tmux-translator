@@ -4,7 +4,7 @@
 
 ## 依赖
 
-- 最新的 tmux master 分支 [tmux/tmux](https://github.com/tmux/tmux)，Arch 用户可以安装 [tmux-git](https://aur.archlinux.org/packages/tmux-git/)
+- tmux >= 3.2
 - [skywind3000/translator#requirements](https://github.com/skywind3000/translator#requirements)
 
 ## 通过 [TPM](https://github.com/tmux-plugins/tpm/) 安装

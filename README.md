@@ -6,7 +6,7 @@
 
 ## Requirements
 
-- The newest development version of [tmux/tmux](https://github.com/tmux/tmux). For Arch Linux users, there is a package available in AUR: [tmux-git](https://aur.archlinux.org/packages/tmux-git/)
+- tmux >= 3.2
 - [skywind3000/translator#requirements](https://github.com/skywind3000/translator#requirements)
 
 ## Install via [TPM](https://github.com/tmux-plugins/tpm/)
