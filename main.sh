@@ -53,6 +53,6 @@ vars=$(echo "$(get_engine)" | sed "s/|/\n/g")
 while IFS= read -r line; do
     result="${result}echo ---$line---; tmux save-buffer - | xargs -I{} python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) {}; echo ''; "
 done <<< "$vars"
-result="${result}read -r"
+result="${result}"
 
-tmux popup -w $(get_width) -h $(get_height) -E "$result"
+tmux popup -w $(get_width) -h $(get_height) "$result"
